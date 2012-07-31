@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.spaceape.open-common</groupId>
@@ -51,7 +52,7 @@
 					<tagNameFormat>v@{project.version}</tagNameFormat>
 				</configuration>
 			</plugin>
-			
+
 			<plugin>
 				<groupId>org.scala-tools</groupId>
 				<artifactId>maven-scala-plugin</artifactId>
@@ -167,10 +168,23 @@
 			</plugins>
 		</pluginManagement>
 	</build>
-	
+
 	<scm>
 		<connection>scm:git:git@github.com:spaceapegames/open-common.git</connection>
 		<tag>scm:git:git@github.com:spaceapegames/open-common.git</tag>
 		<url>scm:git:git@github.com:spaceapegames/open-common.git</url>
 	</scm>
+
+	<distributionManagement>
+		<repository>
+			<id>spaceapegames</id>
+			<name>libs-releases</name>
+			<url>http://spaceapegames.artifactoryonline.com/spaceapegames/libs-releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>spaceapegames</id>
+			<name>libs-snapshots</name>
+			<url>https://spaceapegames.artifactoryonline.com/spaceapegames/libs-snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
 </project>
