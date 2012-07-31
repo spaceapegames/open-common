@@ -3,7 +3,7 @@
 
 	<groupId>com.spaceape.open-common</groupId>
 	<artifactId>scalajson</artifactId>
-	<version>0.1</version>
+	<version>0.2-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>scalajson</name>
@@ -170,7 +170,7 @@
 	
 	<scm>
 		<connection>scm:git:git@github.com:spaceapegames/open-common.git</connection>
-		<tag>v0.1</tag>
+		<tag>scm:git:git@github.com:spaceapegames/open-common.git</tag>
 		<url>scm:git:git@github.com:spaceapegames/open-common.git</url>
 	</scm>
 </project>
