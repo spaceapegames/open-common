@@ -6,13 +6,17 @@ import org.junit.Assert.assertTrue
 import org.junit.Test
 
 import play.api.libs.json._
+import org.junit._
+import Assert._
 
 class JSONTest {
 	@Test def test_add_field(){
 		var str = "{\"name\": \"PP\"}"
 		var jsonO = Json.parse(str).as[JsObject]
 		jsonO = jsonO.++(JsObject(List("time" -> JsNumber(190))))
-		println(Json.stringify(jsonO))
+		
+		var expecting = """{"name":"PP","time":190}"""
+		assertEquals(expecting, Json.stringify(jsonO))
 	}
 	
 	@Test def test_query_optional_field(){
@@ -27,8 +31,12 @@ class JSONTest {
 	
 	@Test def test_deserialize(){
 	   var str = """ {"token":"2","groupname":"default","message":{"username":"Lu","@type":"UserSignIn"},"@type":"BroadcastRequest"} """
-	     var jsonO = Json.parse(str)
+	    var jsonO = Json.parse(str)
+	    
+	    assertEquals(JsString("default"), jsonO \ "groupname")
+	    
 		var result = jsonO \ "message"
-		println(result)
+		
+		assertEquals(JsString("Lu"), result \ "username")
 	}
 }
