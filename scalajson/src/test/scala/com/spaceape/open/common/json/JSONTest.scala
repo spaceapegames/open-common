@@ -30,7 +30,7 @@ class JSONTest {
 	}
 	
 	@Test def test_deserialize(){
-	   var str = """ {"token":"2","groupname":"default","message":{"username":"Lu","@type":"UserSignIn"},"@type":"BroadcastRequest"} """
+		var str = """ {"token":"2","groupname":"default","message":{"username":"Lu","@type":"UserSignIn"},"@type":"BroadcastRequest"} """
 	    var jsonO = Json.parse(str)
 	    
 	    assertEquals(JsString("default"), jsonO \ "groupname")
@@ -38,5 +38,14 @@ class JSONTest {
 		var result = jsonO \ "message"
 		
 		assertEquals(JsString("Lu"), result \ "username")
+	}
+	
+	@Test def test_set_value(){
+	    var str = """ {"token":"2","groupname":"default"} """
+	    var jsonO = Json.parse(str).asInstanceOf[JsObject]
+	    
+	    jsonO = jsonO.++ (JsObject(List("groupname" -> JsString("newname"))))
+	    
+	    assertEquals(JsString("newname"), jsonO \ "groupname")
 	}
 }
