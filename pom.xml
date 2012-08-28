@@ -22,6 +22,5 @@
 	</distributionManagement>
 	<modules>
 		<module>scalajson</module>
-    <module>yaml-config</module>
   </modules>
 </project>
