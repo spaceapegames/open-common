@@ -1,11 +1,15 @@
-<?xml version="1.0"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.spaceape</groupId>
 	<artifactId>open-common</artifactId>
 	<packaging>pom</packaging>
 	<version>0.0.1-SNAPSHOT</version>
+	<scm>
+                <connection>scm:git:git@github.com:spaceapegames/open-common.git</connection>
+                <tag>scm:git:git@github.com:spaceapegames/open-common.git</tag>
+                <url>scm:git:git@github.com:spaceapegames/open-common.git</url>
+        </scm>
 	<distributionManagement>
 		<repository>
 			<id>spaceapegames</id>
@@ -18,5 +22,6 @@
 	</distributionManagement>
 	<modules>
 		<module>scalajson</module>
-	</modules>
+    <module>yaml-config</module>
+  </modules>
 </project>
