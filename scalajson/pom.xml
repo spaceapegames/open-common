@@ -4,7 +4,7 @@
     <parent>
         <groupId>com.spaceape</groupId>
         <artifactId>open-common</artifactId>
-        <version>0.5-SNAPSHOT</version>
+        <version>0.5</version>
     </parent>
 
     <groupId>com.spaceape.open-common</groupId>
