@@ -4,7 +4,7 @@
 	<groupId>com.spaceape</groupId>
 	<artifactId>open-common</artifactId>
 	<packaging>pom</packaging>
-	<version>0.5</version>
+	<version>0.6-SNAPSHOT</version>
 	<scm>
                 <connection>scm:git:git@github.com:spaceapegames/open-common.git</connection>
                 <tag>scm:git:git@github.com:spaceapegames/open-common.git</tag>
